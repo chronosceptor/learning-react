@@ -1,3 +1,4 @@
+// add css inline to components
 import logo from './logo.svg';
 import './App.css';
 
