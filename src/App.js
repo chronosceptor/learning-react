@@ -1,12 +1,23 @@
-import Button from './Button'
+import { Component } from 'react'
 
-const App = () => {
-  return (
-    <div>
-      <h1 onClick={(e) => console.log("click h1")}>hi</h1>
-      <Button onClick={ () => console.log("click btn")}>send</Button>
-    </div>
-  );
+class App extends Component {
+  state = {
+    valor: 3
+  }
+  render(){
+    console.log(this.state);
+    return (
+      <div>
+        <p>hola mundo</p>
+        <button
+          className={`${this.state.valor}`}
+          onClick={() => this.setState({ valor: 2 })}
+          >
+          Enviar
+          </button>
+      </div>
+    )
+  }
 }
 
 export default App;
